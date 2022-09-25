@@ -25,10 +25,9 @@ jobs:
           port: ${{ secrets.PORT }}
           script_stop: true
           script: |
-            echo ${{ github }}
             cd /home/ubuntu/${{ github.event.repository.name }}
             git fetch
-            git merge origin/${{ github.head_ref }}
+            git merge origin/${{ github.event.repository.branch }}
             pnpm i --shamefully-hoist
             pnpm build
             pm2 reload all
