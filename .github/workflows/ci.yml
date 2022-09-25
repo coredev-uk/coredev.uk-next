@@ -30,6 +30,7 @@ jobs:
           key: ${{ secrets.KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           port: ${{ secrets.PORT }}
+          script_stop: true
           script: |
             echo ${{ github }}
             cd /home/ubuntu/${{ github.event.repository.name }}
