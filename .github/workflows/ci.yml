@@ -31,9 +31,10 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           port: ${{ secrets.PORT }}
           script: |
+            echo ${{ github }}
             cd /home/ubuntu/${{ github.event.repository.name }}
             git fetch
-            git merge origin/$GITHUB_BASE_REF
+            git merge origin/${{ github.head_ref }}
             pnpm i --lockfile-only --shamefully-hoist
             pnpm build
             pm2 reload all
