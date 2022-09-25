@@ -1,14 +1,7 @@
 name: Deploy 🚀
 
 on:
-  # Trigger the workflow on push or pull request,
-  # but only for the main branch
   push:
-    branches:
-      - main
-  # Replace pull_request with pull_request_target if you
-  # plan to use this action with forks, see the Limitations section
-  pull_request:
     branches:
       - main
 
