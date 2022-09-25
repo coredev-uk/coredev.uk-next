@@ -27,7 +27,7 @@ jobs:
           script: |
             cd /home/ubuntu/${{ github.event.repository.name }}
             git fetch
-            git merge origin/${{ github.event.repository.branch }}
+            git merge origin/${{ github.base_ref }}
             pnpm i --shamefully-hoist
             pnpm build
             pm2 reload all
