@@ -35,6 +35,6 @@ jobs:
             cd /home/ubuntu/${{ github.event.repository.name }}
             git fetch
             git merge origin/${{ github.head_ref }}
-            pnpm i --lockfile-only --shamefully-hoist
+            pnpm i --shamefully-hoist
             pnpm build
             pm2 reload all
