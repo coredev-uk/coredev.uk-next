@@ -5,12 +5,8 @@ updates:
     directory: '/'
     schedule:
       interval: daily
-      time: '00:00'
+      time: '09:00'
     open-pull-requests-limit: 10
-    reviewers:
-      - coredev-uk
-    assignees:
-      - coredev-uk
     commit-message:
       prefix: fix
       prefix-development: chore
@@ -20,12 +16,8 @@ updates:
     directory: '/'
     schedule:
       interval: daily
-      time: '00:00'
+      time: '09:00'
     open-pull-requests-limit: 10
-    reviewers:
-      - coredev-uk
-    assignees:
-      - coredev-uk
     commit-message:
       prefix: fix
       prefix-development: chore
